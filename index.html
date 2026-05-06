@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RaikoStudios</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <h1 data-es="RaikoStudios" data-en="RaikoStudios">RaikoStudios</h1>
+            </div>
+            <button class="lang-toggle" id="langToggle">
+                <span id="langText">English</span>
+            </button>
+        </div>
+        <p class="header-subtitle"
+           data-es="Explora mis proyectos y herramientas innovadoras"
+           data-en="Explore my innovative projects and tools">
+           Explora mis proyectos y herramientas innovadoras
+        </p>
+    </header>
+
+    <main class="container">
+        <section class="projects-section">
+            <h2 class="section-title"
+                data-es="Mis Proyectos"
+                data-en="My Projects">Mis Proyectos</h2>
+
+            <p class="section-subtitle"
+               data-es="Herramientas y soluciones que he desarrollado"
+               data-en="Tools and solutions I have developed">
+               Herramientas y soluciones que he desarrollado
+            </p>
+            
+            <div class="projects-grid">
+
+                <!-- IMAGE SETTINGS -->
+                <div class="project-card">
+                    <div class="project-badge">Disponible</div>
+                    <div class="project-icon">🖼️</div>
+                    <h3 data-es="Image Settings" data-en="Image Settings">Image Settings</h3>
+                    <p data-es="Herramienta para optimizar y convertir imágenes a diferentes formatos manteniendo calidad y reduciendo tamaño."
+                       data-en="Tool to optimize and convert images while keeping quality and reducing size.">
+                       Herramienta para optimizar y convertir imágenes...
+                    </p>
+                    <div class="project-features">
+                        <span>PNG</span><span>JPG</span><span>WebP</span>
+                    </div>
+                    <a href="Proyectos/Image Settings v1.2.exe" class="btn btn-primary"
+                       data-es="Descargar v1.2" data-en="Download v1.2">
+                       Descargar v1.2
+                    </a>
+                </div>
+
+                <!-- INVENTARIO -->
+                <div class="project-card">
+                    <div class="project-badge">Disponible</div>
+                    <div class="project-icon">📦</div>
+                    <h3 data-es="Inventario" data-en="Inventory">Inventario</h3>
+
+                    <p data-es="Sistema de inventario en Java para negocios pequeños. Permite gestionar productos y usar lector de códigos de barras. Funciona sin internet y en PCs de bajos recursos."
+                       data-en="Inventory system in Java for small businesses. Manage products and use barcode scanner. Works offline and on low-end PCs.">
+                    </p>
+
+                    <div class="project-features">
+                        <span>Productos</span>
+                        <span>Código de barras</span>
+                        <span>Offline</span>
+                    </div>
+
+                    <a href="Proyectos/Inventario v1.1.jar" class="btn btn-primary"
+                       data-es="Descargar v1.1"
+                       data-en="Download v1.1">Descargar v1.1</a>
+
+                    <div class="old-versions">
+                        <p data-es="Versiones anteriores:" data-en="Previous versions:">Versiones anteriores:</p>
+                        <a href="Proyectos/Inventario v1.0.jar">v1.0</a>
+                    </div>
+                </div>
+
+                <!-- OPTIMIZER -->
+                <div class="project-card">
+                    <div class="project-badge">Disponible</div>
+                    <div class="project-icon">⚡</div>
+                    <h3 data-es="Optimizer" data-en="Optimizer">Optimizer</h3>
+
+                    <p data-es="Aplicación en Java para limpiar espacio. Analiza archivos, los ordena por tamaño y permite abrir o eliminarlos fácilmente."
+                       data-en="Java app to free disk space. Scans files, sorts by size and allows quick delete or open.">
+                    </p>
+
+                    <div class="project-features">
+                        <span>Escaneo</span>
+                        <span>Orden</span>
+                        <span>Limpieza</span>
+                    </div>
+
+                    <a href="Proyectos/Optimizer v1.0.jar" class="btn btn-primary"
+                       data-es="Descargar v1.0"
+                       data-en="Download v1.0">Descargar v1.0</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- REQUISITOS -->
+        <section class="projects-section">
+            <h2 class="section-title"
+                data-es="Requisitos"
+                data-en="Requirements">Requisitos</h2>
+
+            <p class="section-subtitle"
+               data-es="Es necesario tener Java 17 o superior para ejecutar los programas."
+               data-en="Java 17 or higher is required to run the programs.">
+            </p>
+        </section>
+
+        <!-- CONTACTO -->
+        <section class="contact-section">
+            <h2 class="section-title"
+                data-es="Ponte en Contacto"
+                data-en="Get in Touch">Ponte en Contacto</h2>
+
+            <p class="section-subtitle"
+               data-es="¿Tienes preguntas o sugerencias? Envíame un mensaje."
+               data-en="Got questions or suggestions? Send me a message.">
+            </p>
+            
+            <div class="contact-content">
+                <form id="contactForm" class="contact-form">
+
+                    <div class="form-group">
+                        <label for="name"
+                               data-es="Nombre:"
+                               data-en="Name:">Nombre:</label>
+                        <input type="text" id="name" required placeholder="Tu nombre">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email"
+                               data-es="Email:"
+                               data-en="Email:">Email:</label>
+                        <input type="email" id="email" required placeholder="tu@email.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject"
+                               data-es="Asunto:"
+                               data-en="Subject:">Asunto:</label>
+                        <input type="text" id="subject" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message"
+                               data-es="Mensaje:"
+                               data-en="Message:">Mensaje:</label>
+                        <textarea id="message" rows="6" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary"
+                            data-es="Enviar Mensaje"
+                            data-en="Send Message">Enviar Mensaje</button>
+
+                </form>
+
+                <div id="formMessage" class="form-message"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p data-es="© 2026 RaikoStudios. Todos los derechos reservados."
+           data-en="© 2026 RaikoStudios. All rights reserved.">
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
