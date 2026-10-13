@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RaikoLauncher 0.3.1 Void — RaikoStudios</title>
+    <meta name="description"
+          content="Descargá RaikoLauncher 0.3.1 Void para Windows y Linux. Una forma sencilla, moderna y personalizable de entrar a Minecraft.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- ===================== ENCABEZADO / NAVEGACIÓN ===================== -->
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a class="brand" href="index.html" aria-label="RaikoStudios, volver al inicio">
+                <svg class="brand__mark" viewBox="0 0 48 48" width="34" height="34" aria-hidden="true" focusable="false">
+                    <defs>
+                        <linearGradient id="brandGrad" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0" stop-color="#a78bfa"/>
+                            <stop offset="1" stop-color="#6d28d9"/>
+                        </linearGradient>
+                    </defs>
+                    <rect x="2" y="2" width="44" height="44" rx="13" fill="#12121a" stroke="#2a2a3a"/>
+                    <path d="M17 34V14h9.2c4.4 0 7.3 2.4 7.3 6.4 0 2.7-1.4 4.7-3.7 5.7l4.5 7.9h-5.3l-3.9-7h-3.5v7H17Zm4.6-10.9h4c2 0 3.2-1 3.2-2.6 0-1.7-1.2-2.6-3.2-2.6h-4v5.2Z"
+                          fill="url(#brandGrad)"/>
+                </svg>
+                <span class="brand__name">RaikoStudios</span>
+            </a>
+
+            <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Abrir menú">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav class="nav" id="primaryNav" aria-label="Navegación principal">
+                <ul class="nav__list">
+                    <li><a class="nav__link" href="index.html" data-es="Inicio" data-en="Home">Inicio</a></li>
+                    <li><a class="nav__link" href="#descargas" data-es="Descargas" data-en="Downloads">Descargas</a></li>
+                    <li><a class="nav__link" href="index.html#soporte" data-es="Soporte" data-en="Support">Soporte</a></li>
+                    <li><a class="nav__link nav__link--accent" href="https://discord.gg/mD6zvqbBMW" target="_blank" rel="noopener noreferrer">Discord</a></li>
+                </ul>
+                <button class="lang-toggle" id="langToggle" type="button">
+                    <span id="langText">English</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===================== PRESENTACIÓN DEL LAUNCHER ===================== -->
+        <section class="hero hero--compact" id="inicio">
+            <div class="hero__inner">
+                <div class="hero__content">
+                    <p class="eyebrow" data-es="Launcher de Minecraft" data-en="Minecraft Launcher">Launcher de Minecraft</p>
+                    <h1 class="hero__title">RaikoLauncher</h1>
+                    <div class="version-badge">
+                        <span data-es="Versión" data-en="Version">Versión</span>
+                        <strong>0.3.1 Void</strong>
+                    </div>
+                    <div class="hero__actions">
+                        <a class="btn btn--ghost" href="index.html"
+                           data-es="← Volver a RaikoStudios" data-en="← Back to RaikoStudios">← Volver a RaikoStudios</a>
+                        <a class="btn btn--primary" href="#descargas"
+                           data-es="Ir a descargas" data-en="Go to downloads">Ir a descargas</a>
+                    </div>
+                </div>
+
+                <div class="hero__visual">
+                    <img class="launcher-art" src="RaikoLauncher.png"
+                         alt="Interfaz de RaikoLauncher 0.3.1 Void"
+                         width="1360" height="738">
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== DESCARGAS ===================== -->
+        <section class="section" id="descargas">
+            <div class="section__head">
+                <p class="eyebrow" data-es="Descargas" data-en="Downloads">Descargas</p>
+                <h2 class="section__title" data-es="Elegí tu sistema" data-en="Choose your system">Elegí tu sistema</h2>
+                <p class="section__subtitle"
+                   data-es="Seleccioná el formato que corresponda a tu computadora. Todas las opciones pertenecen a RaikoLauncher 0.3.1 Void."
+                   data-en="Select the format that matches your computer. All options belong to RaikoLauncher 0.3.1 Void.">
+                    Seleccioná el formato que corresponda a tu computadora. Todas las opciones pertenecen a RaikoLauncher 0.3.1 Void.
+                </p>
+            </div>
+
+            <div class="downloads-grid">
+                <article class="card download-card">
+                    <span class="download-card__icon" aria-hidden="true">🪟</span>
+                    <h3>Windows</h3>
+                    <p class="download-card__desc"
+                       data-es="Instalador o versión portable para Windows de 64 bits."
+                       data-en="Installer or portable version for 64-bit Windows.">Instalador o versión portable para Windows de 64 bits.</p>
+                    <a class="btn btn--primary download-btn" data-download="windows_setup" href="#" data-es="Descargar instalador" data-en="Download installer">Descargar instalador</a>
+                    <p class="download-note" data-download-note="windows_setup"></p>
+                    <a class="btn btn--ghost download-btn" data-download="windows_portable" href="#" data-es="Descargar portable" data-en="Download portable">Descargar portable</a>
+                    <p class="download-note" data-download-note="windows_portable"></p>
+                </article>
+
+                <article class="card download-card">
+                    <span class="download-card__icon" aria-hidden="true">🐧</span>
+                    <h3>Linux DEB</h3>
+                    <p class="download-card__desc"
+                       data-es="Paquete .deb para Debian, Ubuntu y derivados."
+                       data-en=".deb package for Debian, Ubuntu and derivatives.">Paquete .deb para Debian, Ubuntu y derivados.</p>
+                    <a class="btn btn--primary download-btn" data-download="linux_deb" href="#" data-es="Descargar" data-en="Download">Descargar</a>
+                    <p class="download-note" data-download-note="linux_deb"></p>
+                </article>
+
+                <article class="card download-card">
+                    <span class="download-card__icon" aria-hidden="true">🐧</span>
+                    <h3>Linux RPM</h3>
+                    <p class="download-card__desc"
+                       data-es="Paquete .rpm para Fedora, openSUSE y derivados."
+                       data-en=".rpm package for Fedora, openSUSE and derivatives.">Paquete .rpm para Fedora, openSUSE y derivados.</p>
+                    <a class="btn btn--primary download-btn" data-download="linux_rpm" href="#" data-es="Descargar" data-en="Download">Descargar</a>
+                    <p class="download-note" data-download-note="linux_rpm"></p>
+                </article>
+
+                <article class="card download-card">
+                    <span class="download-card__icon" aria-hidden="true">🐧</span>
+                    <h3>Linux AppImage</h3>
+                    <p class="download-card__desc"
+                       data-es="Ejecutable portable que no requiere instalación."
+                       data-en="Portable executable that requires no installation.">Ejecutable portable que no requiere instalación.</p>
+                    <a class="btn btn--primary download-btn" data-download="linux_appimage" href="#" data-es="Descargar" data-en="Download">Descargar</a>
+                    <p class="download-note" data-download-note="linux_appimage"></p>
+                </article>
+
+                <article class="card download-card">
+                    <span class="download-card__icon" aria-hidden="true">🐧</span>
+                    <h3>Linux PKG.TAR.ZST</h3>
+                    <p class="download-card__desc"
+                       data-es="Paquete .pkg.tar.zst para Arch Linux y derivados."
+                       data-en=".pkg.tar.zst package for Arch Linux and derivatives.">Paquete .pkg.tar.zst para Arch Linux y derivados.</p>
+                    <a class="btn btn--primary download-btn" data-download="linux_pkg_tar_zst" href="#" data-es="Descargar" data-en="Download">Descargar</a>
+                    <p class="download-note" data-download-note="linux_pkg_tar_zst"></p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===================== PIE DE PÁGINA ===================== -->
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <div class="site-footer__brand">
+                <span class="site-footer__name">RaikoStudios</span>
+                <span class="site-footer__copy">© <span id="year">2026</span> RaikoStudios.</span>
+            </div>
+            <nav class="site-footer__nav" aria-label="Enlaces del pie de página">
+                <a href="index.html" data-es="Inicio" data-en="Home">Inicio</a>
+                <a href="index.html#soporte" data-es="Soporte" data-en="Support">Soporte</a>
+                <a href="https://discord.gg/mD6zvqbBMW" target="_blank" rel="noopener noreferrer">Discord</a>
+                <a href="https://Ko-fi.com/raikkito" target="_blank" rel="noopener noreferrer"
+                   data-es="Donaciones" data-en="Donations">Donaciones</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
