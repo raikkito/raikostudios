@@ -13,30 +13,33 @@
 }
 
 :root {
-    /* Paleta */
-    --violet: #8b5cf6;
-    --violet-dark: #6d28d9;
-    --violet-light: #a78bfa;
+    --pink: #ff4f9a;
+    --pink-dark: #db357c;
+    --pink-light: #ff8cba;
+    --leaf: #b7e65a;
     --discord: #5865f2;
     --discord-dark: #4752c4;
 
-    --bg: #07070a;
-    --bg-2: #0c0c12;
-    --surface: #101018;
-    --surface-2: #15151f;
-    --border: #26263a;
-    --border-soft: #1c1c2a;
+    --bg: #111215;
+    --bg-2: #17191d;
+    --surface: #1c1f24;
+    --surface-2: #25282e;
+    --border: #383b42;
+    --border-soft: #292c31;
 
-    --text: #f4f4f7;
-    --muted: #9a9aad;
+    --text: #f3f1ef;
+    --muted: #a8a8ad;
 
     --success: #34d399;
     --error: #f87171;
 
-    --radius: 16px;
-    --radius-sm: 10px;
-    --shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
-    --max-width: 1160px;
+    --violet: var(--pink);
+    --violet-dark: var(--pink-dark);
+    --violet-light: var(--pink-light);
+    --radius: 8px;
+    --radius-sm: 4px;
+    --shadow: 0 18px 40px rgba(0, 0, 0, 0.32);
+    --max-width: 1200px;
 }
 
 html {
@@ -45,12 +48,11 @@ html {
 }
 
 body {
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: "DM Sans", "Segoe UI", sans-serif;
     background-color: var(--bg);
-    background-image:
-        radial-gradient(60rem 40rem at 80% -10%, rgba(139, 92, 246, 0.14), transparent 60%),
-        radial-gradient(50rem 35rem at 0% 0%, rgba(109, 40, 217, 0.10), transparent 55%);
-    background-attachment: fixed;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+    background-size: 40px 40px;
     color: var(--text);
     line-height: 1.65;
     min-height: 100vh;
@@ -58,8 +60,9 @@ body {
 }
 
 h1, h2, h3 {
+    font-family: "Space Grotesk", "DM Sans", sans-serif;
     line-height: 1.2;
-    letter-spacing: -0.01em;
+    letter-spacing: 0;
 }
 
 a {
@@ -73,10 +76,16 @@ a {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(7, 7, 10, 0.78);
+    background: rgba(17, 18, 21, 0.96);
     border-bottom: 1px solid var(--border-soft);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+}
+
+.site-header::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto;
+    height: 2px;
+    background: var(--pink);
 }
 
 .site-header__inner {
@@ -109,10 +118,7 @@ a {
 }
 
 .brand__name {
-    background: linear-gradient(120deg, #fff 10%, var(--violet-light) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--text);
 }
 
 .nav {
@@ -142,24 +148,24 @@ a {
 .nav__link:hover,
 .nav__link:focus-visible {
     color: var(--text);
-    background-color: rgba(139, 92, 246, 0.12);
+    background-color: rgba(255, 79, 154, 0.1);
     outline: none;
 }
 
 .nav__link--accent {
-    color: var(--violet-light);
-    border: 1px solid rgba(139, 92, 246, 0.4);
+    color: var(--pink-light);
+    border: 1px solid rgba(255, 79, 154, 0.42);
 }
 
 .nav__link--accent:hover {
-    background-color: rgba(139, 92, 246, 0.2);
+    background-color: rgba(255, 79, 154, 0.16);
     color: #fff;
 }
 
 .lang-toggle {
-    background: rgba(139, 92, 246, 0.15);
-    color: var(--violet-light);
-    border: 1px solid rgba(139, 92, 246, 0.35);
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--border);
     padding: 0.45rem 0.95rem;
     border-radius: 999px;
     cursor: pointer;
@@ -170,9 +176,9 @@ a {
 }
 
 .lang-toggle:hover {
-    background: var(--violet);
+    background: var(--pink);
     color: #fff;
-    border-color: var(--violet);
+    border-color: var(--pink);
 }
 
 /* Botón hamburguesa (oculto en escritorio) */
@@ -184,8 +190,8 @@ a {
     width: 42px;
     height: 42px;
     padding: 0 9px;
-    background: rgba(139, 92, 246, 0.12);
-    border: 1px solid rgba(139, 92, 246, 0.3);
+    background: var(--surface);
+    border: 1px solid var(--border);
     border-radius: var(--radius-sm);
     cursor: pointer;
 }
@@ -194,7 +200,7 @@ a {
     display: block;
     height: 2px;
     width: 100%;
-    background: var(--violet-light);
+    background: var(--pink-light);
     border-radius: 2px;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
@@ -221,7 +227,7 @@ main {
 }
 
 .section {
-    padding: 4.5rem 0;
+    padding: 4rem 0;
 }
 
 .section__head {
@@ -233,20 +239,17 @@ main {
     display: inline-block;
     font-size: 0.78rem;
     font-weight: 700;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--violet-light);
     margin-bottom: 0.75rem;
 }
 
 .section__title {
-    font-size: clamp(1.8rem, 3.2vw, 2.5rem);
+    font-size: 2.15rem;
     font-weight: 700;
     margin-bottom: 0.85rem;
-    background: linear-gradient(120deg, #ffffff 15%, var(--violet-light) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--text);
 }
 
 .section__subtitle {
@@ -263,7 +266,7 @@ main {
     justify-content: center;
     gap: 0.5rem;
     padding: 0.85rem 1.6rem;
-    border-radius: var(--radius-sm);
+    border-radius: 4px;
     border: 1px solid transparent;
     text-decoration: none;
     font-weight: 600;
@@ -279,14 +282,13 @@ main {
 }
 
 .btn--primary {
-    background: linear-gradient(135deg, var(--violet) 0%, var(--violet-dark) 100%);
+    background: var(--pink);
     color: #fff;
-    box-shadow: 0 8px 22px rgba(109, 40, 217, 0.35);
+    box-shadow: none;
 }
 
 .btn--primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 30px rgba(139, 92, 246, 0.45);
+    background: var(--pink-dark);
 }
 
 .btn--ghost {
@@ -296,20 +298,18 @@ main {
 }
 
 .btn--ghost:hover {
-    border-color: var(--violet);
-    color: var(--violet-light);
-    transform: translateY(-2px);
+    border-color: var(--pink);
+    color: var(--pink-light);
 }
 
 .btn--discord {
-    background: linear-gradient(135deg, var(--discord) 0%, var(--discord-dark) 100%);
+    background: var(--discord);
     color: #fff;
-    box-shadow: 0 8px 22px rgba(88, 101, 242, 0.35);
+    box-shadow: none;
 }
 
 .btn--discord:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 30px rgba(88, 101, 242, 0.5);
+    background: var(--discord-dark);
 }
 
 .btn--block {
@@ -329,7 +329,7 @@ main {
    HERO
    ========================================================================= */
 .hero {
-    padding: 5rem 0 3.5rem;
+    padding: 4.5rem 0 3.8rem;
 }
 
 .hero--compact {
@@ -338,20 +338,17 @@ main {
 
 .hero__inner {
     display: grid;
-    grid-template-columns: 1.05fr 0.95fr;
+    grid-template-columns: 0.82fr 1.18fr;
     align-items: center;
     gap: 3rem;
 }
 
 .hero__title {
-    font-size: clamp(2.6rem, 6vw, 4.2rem);
+    font-size: 4rem;
     font-weight: 800;
-    letter-spacing: -0.03em;
+    letter-spacing: 0;
     line-height: 1.05;
-    background: linear-gradient(120deg, #ffffff 20%, var(--violet-light) 75%, var(--violet) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--text);
     margin: 0.35rem 0 0.9rem;
 }
 
@@ -360,16 +357,16 @@ main {
     align-items: center;
     gap: 0.5rem;
     padding: 0.4rem 0.9rem;
-    border-radius: 999px;
-    background: rgba(139, 92, 246, 0.12);
-    border: 1px solid rgba(139, 92, 246, 0.35);
+    border-radius: 4px;
+    background: rgba(255, 79, 154, 0.1);
+    border: 1px solid rgba(255, 79, 154, 0.45);
     font-size: 0.9rem;
     color: var(--muted);
     margin-bottom: 1.35rem;
 }
 
 .version-badge strong {
-    color: var(--violet-light);
+    color: var(--pink-light);
     font-weight: 700;
 }
 
@@ -389,34 +386,33 @@ main {
 .hero__visual {
     display: flex;
     justify-content: center;
+    min-width: 0;
 }
 
 .launcher-art {
     width: 100%;
-    max-width: 520px;
+    max-width: 720px;
     height: auto;
-    border: 1px solid var(--border);
-    border-radius: 14px;
+    border: 1px solid #44464b;
+    border-radius: 5px;
     background: var(--surface);
-    filter: drop-shadow(0 25px 45px rgba(0, 0, 0, 0.55));
-    animation: floatIn 0.8s ease both;
+    box-shadow: 12px 12px 0 rgba(255, 79, 154, 0.12);
+    animation: floatIn 0.65s ease both;
 }
 
 /* =========================================================================
    TARJETAS
    ========================================================================= */
 .card {
-    background: linear-gradient(160deg, var(--surface) 0%, var(--bg-2) 100%);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 2rem;
-    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    padding: 2rem 0;
+    transition: border-color 0.3s ease;
 }
 
 .card:hover {
-    border-color: rgba(139, 92, 246, 0.5);
-    transform: translateY(-4px);
-    box-shadow: var(--shadow);
+    border-color: var(--border);
 }
 
 .card h3 {
@@ -433,15 +429,15 @@ main {
 }
 
 .card--discord {
-    background:
-        radial-gradient(40rem 20rem at 100% 0%, rgba(88, 101, 242, 0.18), transparent 60%),
-        linear-gradient(160deg, var(--surface) 0%, var(--bg-2) 100%);
+    border-top: 1px solid var(--border);
+    border-left: 3px solid var(--discord);
+    padding-left: 1.5rem;
 }
 
 .card--donate {
-    background:
-        radial-gradient(40rem 20rem at 100% 0%, rgba(139, 92, 246, 0.18), transparent 60%),
-        linear-gradient(160deg, var(--surface) 0%, var(--bg-2) 100%);
+    border-top: 1px solid var(--border);
+    border-left: 3px solid var(--leaf);
+    padding-left: 1.5rem;
 }
 
 .card .btn {
@@ -450,7 +446,9 @@ main {
 
 /* Soporte */
 .support-card {
-    max-width: 680px;
+    max-width: none;
+    padding: 0 0 0 1.5rem;
+    border-left: 3px solid var(--pink);
 }
 
 .contact-form {
@@ -473,7 +471,7 @@ main {
 .form-group input,
 .form-group textarea {
     padding: 0.8rem 0.9rem;
-    background: rgba(0, 0, 0, 0.35);
+    background: #191b1f;
     border: 1px solid var(--border);
     border-radius: var(--radius-sm);
     color: var(--text);
@@ -490,9 +488,9 @@ main {
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--violet);
-    background: rgba(139, 92, 246, 0.08);
-    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.18);
+    border-color: var(--pink);
+    background: #1c1e23;
+    box-shadow: 0 0 0 2px rgba(255, 79, 154, 0.18);
 }
 
 .form-message {
@@ -516,6 +514,29 @@ main {
     background: rgba(248, 113, 113, 0.12);
     color: var(--error);
     border: 1px solid rgba(248, 113, 113, 0.45);
+}
+
+#soporte {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 2rem 4rem;
+    align-items: start;
+}
+
+#soporte .section__head {
+    margin: 0;
+}
+
+.contact-form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 1rem;
+}
+
+.contact-form .form-group:last-of-type,
+.contact-form .btn,
+#formMessage {
+    grid-column: 1 / -1;
 }
 
 /* =========================================================================
@@ -564,12 +585,66 @@ main {
     color: #fbbf24;
 }
 
+.os-section {
+    padding: 1.5rem 0 2rem;
+    border-top: 1px solid var(--border);
+}
+
+.os-section__head {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.os-section__icon {
+    font-size: 1.35rem;
+    line-height: 1;
+}
+
+.os-section__name {
+    font-size: 1.35rem;
+}
+
+.os-section__buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 0.75rem;
+}
+
+.os-button {
+    justify-content: flex-start;
+    min-height: 58px;
+    padding: 0.8rem 1rem;
+    background: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--border);
+    box-shadow: none;
+}
+
+.os-button:hover {
+    background: #252128;
+    border-color: var(--pink);
+    transform: none;
+}
+
+.os-button__icon {
+    display: inline-grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    background: var(--surface-2);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
 /* =========================================================================
    PIE DE PÁGINA
    ========================================================================= */
 .site-footer {
     border-top: 1px solid var(--border-soft);
-    margin-top: 3rem;
+    margin-top: 2rem;
+    background: rgba(17, 18, 21, 0.88);
 }
 
 .site-footer__inner {
@@ -610,7 +685,7 @@ main {
 }
 
 .site-footer__nav a:hover {
-    color: var(--violet-light);
+    color: var(--pink-light);
 }
 
 /* =========================================================================
@@ -661,7 +736,12 @@ main {
     }
 
     .hero__visual {
-        order: -1;
+        order: 0;
+    }
+
+    #soporte {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 }
 
@@ -679,10 +759,8 @@ main {
         align-items: stretch;
         gap: 0.75rem;
         padding: 1rem 1.5rem 1.4rem;
-        background: rgba(7, 7, 10, 0.97);
+        background: #111215;
         border-bottom: 1px solid var(--border);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
         transform: translateY(-8px);
         opacity: 0;
         pointer-events: none;
@@ -712,7 +790,7 @@ main {
     }
 
     .section {
-        padding: 3.25rem 0;
+        padding: 3rem 0;
     }
 
     .hero,
@@ -722,6 +800,14 @@ main {
 
     .hero__text {
         font-size: 1.05rem;
+    }
+
+    .hero__title {
+        font-size: 3.25rem;
+    }
+
+    .launcher-art {
+        box-shadow: 6px 6px 0 rgba(255, 79, 154, 0.12);
     }
 }
 
@@ -733,11 +819,35 @@ main {
         padding-right: 1.1rem;
     }
 
-    .card {
-        padding: 1.5rem;
-    }
-
     .hero__actions .btn {
         width: 100%;
+    }
+
+    .hero__title {
+        font-size: 2.8rem;
+        overflow-wrap: anywhere;
+    }
+
+    .section__title {
+        font-size: 1.9rem;
+    }
+
+    .contact-form {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form .form-group,
+    .contact-form .btn,
+    #formMessage {
+        grid-column: 1;
+    }
+
+    .support-card {
+        padding-left: 1rem;
+    }
+
+    .card--discord,
+    .card--donate {
+        padding-left: 1rem;
     }
 }
