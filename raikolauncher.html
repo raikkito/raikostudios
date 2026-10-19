@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RaikoLauncher 0.3.1 Void — RaikoStudios</title>
+    <meta name="description"
+          content="Descargá RaikoLauncher 0.3.1 Void para Windows y Linux. Una forma sencilla, moderna y personalizable de entrar a Minecraft.">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- ===================== ENCABEZADO / NAVEGACIÓN ===================== -->
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a class="brand" href="index.html" aria-label="RaikoStudios, volver al inicio">
+                <svg class="brand__mark" viewBox="0 0 48 48" width="34" height="34" aria-hidden="true" focusable="false">
+                    <defs>
+                        <linearGradient id="brandGrad" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0" stop-color="#ff8cba"/>
+                            <stop offset="1" stop-color="#ff4f9a"/>
+                        </linearGradient>
+                    </defs>
+                    <rect x="2" y="2" width="44" height="44" rx="13" fill="#12121a" stroke="#2a2a3a"/>
+                    <path d="M17 34V14h9.2c4.4 0 7.3 2.4 7.3 6.4 0 2.7-1.4 4.7-3.7 5.7l4.5 7.9h-5.3l-3.9-7h-3.5v7H17Zm4.6-10.9h4c2 0 3.2-1 3.2-2.6 0-1.7-1.2-2.6-3.2-2.6h-4v5.2Z"
+                          fill="url(#brandGrad)"/>
+                </svg>
+                <span class="brand__name">RaikoStudios</span>
+            </a>
+
+            <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Abrir menú">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav class="nav" id="primaryNav" aria-label="Navegación principal">
+                <ul class="nav__list">
+                    <li><a class="nav__link" href="index.html" data-es="Inicio" data-en="Home">Inicio</a></li>
+                    <li><a class="nav__link" href="#descargas" data-es="Descargas" data-en="Downloads">Descargas</a></li>
+                    <li><a class="nav__link" href="index.html#soporte" data-es="Soporte" data-en="Support">Soporte</a></li>
+                    <li><a class="nav__link nav__link--accent" href="https://discord.gg/mD6zvqbBMW" target="_blank" rel="noopener noreferrer">Discord</a></li>
+                </ul>
+                <button class="lang-toggle" id="langToggle" type="button">
+                    <span id="langText">English</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===================== PRESENTACIÓN DEL LAUNCHER ===================== -->
+        <section class="hero hero--compact" id="inicio">
+            <div class="hero__inner">
+                <div class="hero__content">
+                    <p class="eyebrow" data-es="Launcher de Minecraft" data-en="Minecraft Launcher">Launcher de Minecraft</p>
+                    <h1 class="hero__title">RaikoLauncher</h1>
+                    <div class="version-badge">
+                        <span data-es="Versión" data-en="Version">Versión</span>
+                        <strong>0.3.1 Void</strong>
+                    </div>
+                    <div class="hero__actions">
+                        <a class="btn btn--ghost" href="index.html"
+                           data-es="← Volver a RaikoStudios" data-en="← Back to RaikoStudios">← Volver a RaikoStudios</a>
+                        <a class="btn btn--primary" href="#descargas"
+                           data-es="Ir a descargas" data-en="Go to downloads">Ir a descargas</a>
+                    </div>
+                </div>
+
+                <div class="hero__visual">
+                    <img class="launcher-art" src="RaikoLauncher.png"
+                         alt="Interfaz de RaikoLauncher 0.3.1 Void"
+                         width="1360" height="738">
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== DESCARGAS ===================== -->
+        <section class="section" id="descargas">
+            <div class="section__head">
+                <p class="eyebrow" data-es="Descargas" data-en="Downloads">Descargas</p>
+                <h2 class="section__title" data-es="Elegí tu sistema" data-en="Choose your system">Elegí tu sistema</h2>
+                <p class="section__subtitle"
+                   data-es="Seleccioná el formato que corresponda a tu computadora. Todas las opciones pertenecen a RaikoLauncher 0.3.1 Void."
+                   data-en="Select the format that matches your computer. All options belong to RaikoLauncher 0.3.1 Void.">
+                    Seleccioná el formato que corresponda a tu computadora. Todas las opciones pertenecen a RaikoLauncher 0.3.1 Void.
+                </p>
+            </div>
+
+            <div class="os-section">
+                <div class="os-section__head">
+                    <span class="os-section__icon" aria-hidden="true">🪟</span>
+                    <h3 class="os-section__name">Windows</h3>
+                </div>
+                <div class="os-section__buttons">
+                    <a class="btn btn--primary os-button"
+                       href="https://drive.google.com/file/d/1GQl41-_YpugLfB3TPO3q6FIMhkKWoiJb/view?usp=sharing"
+                       target="_blank" rel="noopener noreferrer">
+                        <span class="os-button__icon" aria-hidden="true">💾</span>
+                        Windows Portable
+                    </a>
+                    <a class="btn btn--primary os-button"
+                       href="https://drive.google.com/file/d/1ymQ_UKxZptWs2wAmpQom5XIu-AH3Qwes/view?usp=sharing"
+                       target="_blank" rel="noopener noreferrer">
+                        <span class="os-button__icon" aria-hidden="true">⚙️</span>
+                        Windows Setup
+                    </a>
+                </div>
+            </div>
+
+            <div class="os-section">
+                <div class="os-section__head">
+                    <span class="os-section__icon" aria-hidden="true">🐧</span>
+                    <h3 class="os-section__name">Linux</h3>
+                </div>
+                <div class="os-section__buttons">
+                    <a class="btn btn--primary os-button"
+                       href="https://drive.google.com/file/d/13GWQdLWshc3Tbio-QNwuz8X-LNgO2elb/view?usp=sharing"
+                       target="_blank" rel="noopener noreferrer">
+                        <span class="os-button__icon" aria-hidden="true">🚀</span>
+                        AppImage
+                    </a>
+                    <a class="btn btn--primary os-button"
+                       href="https://drive.google.com/file/d/1-xm6wZPDbPzQyfXL7qxCZCeSV1pG_GYx/view?usp=sharing"
+                       target="_blank" rel="noopener noreferrer">
+                        <span class="os-button__icon" aria-hidden="true">📦</span>
+                        DEB
+                    </a>
+                    <a class="btn btn--primary os-button"
+                       href="https://drive.google.com/file/d/1MQ014FP-esVonL7E_St_4YWSa6PRvgdZ/view?usp=sharing"
+                       target="_blank" rel="noopener noreferrer">
+                        <span class="os-button__icon" aria-hidden="true">📦</span>
+                        RPM
+                    </a>
+                    <a class="btn btn--primary os-button"
+                       href="https://drive.google.com/file/d/1gqB_BlrYFkAM1qMKpst9BlZmVdhYl6Jc/view?usp=sharing"
+                       target="_blank" rel="noopener noreferrer">
+                        <span class="os-button__icon" aria-hidden="true">🗜️</span>
+                        TAR.GZ
+                    </a>
+                    <a class="btn btn--primary os-button"
+                       href="https://drive.google.com/file/d/17o5Oabwv-BzLaKc28gID5Qc-o5mzEE0e/view?usp=sharing"
+                       target="_blank" rel="noopener noreferrer">
+                        <span class="os-button__icon" aria-hidden="true">🗜️</span>
+                        TAR.ZST
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===================== PIE DE PÁGINA ===================== -->
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <div class="site-footer__brand">
+                <span class="site-footer__name">RaikoStudios</span>
+                <span class="site-footer__copy">© <span id="year">2026</span> RaikoStudios.</span>
+            </div>
+            <nav class="site-footer__nav" aria-label="Enlaces del pie de página">
+                <a href="index.html" data-es="Inicio" data-en="Home">Inicio</a>
+                <a href="index.html#soporte" data-es="Soporte" data-en="Support">Soporte</a>
+                <a href="https://discord.gg/mD6zvqbBMW" target="_blank" rel="noopener noreferrer">Discord</a>
+                <a href="https://Ko-fi.com/raikkito" target="_blank" rel="noopener noreferrer"
+                   data-es="Donaciones" data-en="Donations">Donaciones</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
